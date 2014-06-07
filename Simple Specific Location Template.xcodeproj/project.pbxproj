@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		437C073BEB9F4547B0920AC1 /* libPods-Simple Specific Location Template.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8750D965B582425699B587DB /* libPods-Simple Specific Location Template.a */; };
+		BA29ECAB193A29E50034E4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29ECAA193A29E50034E4F8 /* Foundation.framework */; };
+		BA29ECAD193A29E50034E4F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29ECAC193A29E50034E4F8 /* CoreGraphics.framework */; };
+		BA29ECAF193A29E50034E4F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29ECAE193A29E50034E4F8 /* UIKit.framework */; };
+		BA29ECB5193A29E50034E4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA29ECB3193A29E50034E4F8 /* InfoPlist.strings */; };
+		BA29ECB7193A29E50034E4F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA29ECB6193A29E50034E4F8 /* main.m */; };
+		BA29ECBB193A29E50034E4F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA29ECBA193A29E50034E4F8 /* AppDelegate.m */; };
+		BA29ECBE193A29E50034E4F8 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA29ECBC193A29E50034E4F8 /* Main_iPhone.storyboard */; };
+		BA29ECC1193A29E50034E4F8 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA29ECBF193A29E50034E4F8 /* Main_iPad.storyboard */; };
+		BA29ECC4193A29E50034E4F8 /* SpecificLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA29ECC3193A29E50034E4F8 /* SpecificLocationViewController.m */; };
+		BA29ECC6193A29E60034E4F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA29ECC5193A29E60034E4F8 /* Images.xcassets */; };
+		BA29ECCD193A29E60034E4F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29ECCC193A29E60034E4F8 /* XCTest.framework */; };
+		BA29ECCE193A29E60034E4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29ECAA193A29E50034E4F8 /* Foundation.framework */; };
+		BA29ECCF193A29E60034E4F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29ECAE193A29E50034E4F8 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA29ECD0193A29E60034E4F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA29EC9F193A29E50034E4F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA29ECA6193A29E50034E4F8;
+			remoteInfo = "Simple Specific Location Template";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8750D965B582425699B587DB /* libPods-Simple Specific Location Template.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Simple Specific Location Template.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA29ECA7193A29E50034E4F8 /* MegaSelfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegaSelfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA29ECAA193A29E50034E4F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BA29ECAC193A29E50034E4F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BA29ECAE193A29E50034E4F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BA29ECB2193A29E50034E4F8 /* Simple Specific Location Template-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Simple Specific Location Template-Info.plist"; sourceTree = "<group>"; };
+		BA29ECB4193A29E50034E4F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA29ECB6193A29E50034E4F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA29ECB8193A29E50034E4F8 /* Simple Specific Location Template-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Simple Specific Location Template-Prefix.pch"; sourceTree = "<group>"; };
+		BA29ECB9193A29E50034E4F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BA29ECBA193A29E50034E4F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BA29ECBD193A29E50034E4F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		BA29ECC0193A29E50034E4F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		BA29ECC2193A29E50034E4F8 /* SpecificLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecificLocationViewController.h; sourceTree = "<group>"; };
+		BA29ECC3193A29E50034E4F8 /* SpecificLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecificLocationViewController.m; sourceTree = "<group>"; };
+		BA29ECC5193A29E60034E4F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA29ECCB193A29E60034E4F8 /* Simple Specific Location TemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple Specific Location TemplateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA29ECCC193A29E60034E4F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D2B56C9BFA424DCCBD83C338 /* Pods-Simple Specific Location Template.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Specific Location Template.xcconfig"; path = "Pods/Pods-Simple Specific Location Template.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA29ECA4193A29E50034E4F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA29ECAD193A29E50034E4F8 /* CoreGraphics.framework in Frameworks */,
+				BA29ECAF193A29E50034E4F8 /* UIKit.framework in Frameworks */,
+				BA29ECAB193A29E50034E4F8 /* Foundation.framework in Frameworks */,
+				437C073BEB9F4547B0920AC1 /* libPods-Simple Specific Location Template.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA29ECC8193A29E60034E4F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA29ECCD193A29E60034E4F8 /* XCTest.framework in Frameworks */,
+				BA29ECCF193A29E60034E4F8 /* UIKit.framework in Frameworks */,
+				BA29ECCE193A29E60034E4F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA29EC9E193A29E50034E4F8 = {
+			isa = PBXGroup;
+			children = (
+				BA29ECB0193A29E50034E4F8 /* Simple Specific Location Template */,
+				BA29ECA9193A29E50034E4F8 /* Frameworks */,
+				BA29ECA8193A29E50034E4F8 /* Products */,
+				D2B56C9BFA424DCCBD83C338 /* Pods-Simple Specific Location Template.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		BA29ECA8193A29E50034E4F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA29ECA7193A29E50034E4F8 /* MegaSelfie.app */,
+				BA29ECCB193A29E60034E4F8 /* Simple Specific Location TemplateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA29ECA9193A29E50034E4F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA29ECAA193A29E50034E4F8 /* Foundation.framework */,
+				BA29ECAC193A29E50034E4F8 /* CoreGraphics.framework */,
+				BA29ECAE193A29E50034E4F8 /* UIKit.framework */,
+				BA29ECCC193A29E60034E4F8 /* XCTest.framework */,
+				8750D965B582425699B587DB /* libPods-Simple Specific Location Template.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA29ECB0193A29E50034E4F8 /* Simple Specific Location Template */ = {
+			isa = PBXGroup;
+			children = (
+				BA29ECB9193A29E50034E4F8 /* AppDelegate.h */,
+				BA29ECBA193A29E50034E4F8 /* AppDelegate.m */,
+				BA29ECBC193A29E50034E4F8 /* Main_iPhone.storyboard */,
+				BA29ECBF193A29E50034E4F8 /* Main_iPad.storyboard */,
+				BA29ECC2193A29E50034E4F8 /* SpecificLocationViewController.h */,
+				BA29ECC3193A29E50034E4F8 /* SpecificLocationViewController.m */,
+				BA29ECC5193A29E60034E4F8 /* Images.xcassets */,
+				BA29ECB1193A29E50034E4F8 /* Supporting Files */,
+			);
+			path = "Simple Specific Location Template";
+			sourceTree = "<group>";
+		};
+		BA29ECB1193A29E50034E4F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA29ECB2193A29E50034E4F8 /* Simple Specific Location Template-Info.plist */,
+				BA29ECB3193A29E50034E4F8 /* InfoPlist.strings */,
+				BA29ECB6193A29E50034E4F8 /* main.m */,
+				BA29ECB8193A29E50034E4F8 /* Simple Specific Location Template-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA29ECA6193A29E50034E4F8 /* Simple Specific Location Template */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA29ECDC193A29E60034E4F8 /* Build configuration list for PBXNativeTarget "Simple Specific Location Template" */;
+			buildPhases = (
+				074F049DD3B84DE895913E0C /* Check Pods Manifest.lock */,
+				BA29ECA3193A29E50034E4F8 /* Sources */,
+				BA29ECA4193A29E50034E4F8 /* Frameworks */,
+				BA29ECA5193A29E50034E4F8 /* Resources */,
+				74183CF77DAE4E89BD6C8B1D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simple Specific Location Template";
+			productName = "Simple Specific Location Template";
+			productReference = BA29ECA7193A29E50034E4F8 /* MegaSelfie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA29ECCA193A29E60034E4F8 /* Simple Specific Location TemplateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA29ECDF193A29E60034E4F8 /* Build configuration list for PBXNativeTarget "Simple Specific Location TemplateTests" */;
+			buildPhases = (
+				BA29ECC7193A29E60034E4F8 /* Sources */,
+				BA29ECC8193A29E60034E4F8 /* Frameworks */,
+				BA29ECC9193A29E60034E4F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA29ECD1193A29E60034E4F8 /* PBXTargetDependency */,
+			);
+			name = "Simple Specific Location TemplateTests";
+			productName = "Simple Specific Location TemplateTests";
+			productReference = BA29ECCB193A29E60034E4F8 /* Simple Specific Location TemplateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA29EC9F193A29E50034E4F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					BA29ECCA193A29E60034E4F8 = {
+						TestTargetID = BA29ECA6193A29E50034E4F8;
+					};
+				};
+			};
+			buildConfigurationList = BA29ECA2193A29E50034E4F8 /* Build configuration list for PBXProject "Simple Specific Location Template" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA29EC9E193A29E50034E4F8;
+			productRefGroup = BA29ECA8193A29E50034E4F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA29ECA6193A29E50034E4F8 /* Simple Specific Location Template */,
+				BA29ECCA193A29E60034E4F8 /* Simple Specific Location TemplateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA29ECA5193A29E50034E4F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA29ECC1193A29E50034E4F8 /* Main_iPad.storyboard in Resources */,
+				BA29ECC6193A29E60034E4F8 /* Images.xcassets in Resources */,
+				BA29ECBE193A29E50034E4F8 /* Main_iPhone.storyboard in Resources */,
+				BA29ECB5193A29E50034E4F8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA29ECC9193A29E60034E4F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		074F049DD3B84DE895913E0C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		74183CF77DAE4E89BD6C8B1D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Simple Specific Location Template-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA29ECA3193A29E50034E4F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA29ECC4193A29E50034E4F8 /* SpecificLocationViewController.m in Sources */,
+				BA29ECBB193A29E50034E4F8 /* AppDelegate.m in Sources */,
+				BA29ECB7193A29E50034E4F8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA29ECC7193A29E60034E4F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA29ECD1193A29E60034E4F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA29ECA6193A29E50034E4F8 /* Simple Specific Location Template */;
+			targetProxy = BA29ECD0193A29E60034E4F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA29ECB3193A29E50034E4F8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA29ECB4193A29E50034E4F8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BA29ECBC193A29E50034E4F8 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA29ECBD193A29E50034E4F8 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		BA29ECBF193A29E50034E4F8 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA29ECC0193A29E50034E4F8 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA29ECDA193A29E60034E4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA29ECDB193A29E60034E4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA29ECDD193A29E60034E4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2B56C9BFA424DCCBD83C338 /* Pods-Simple Specific Location Template.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Danny Lein (2RPLKSXL24)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simple Specific Location Template/Simple Specific Location Template-Prefix.pch";
+				INFOPLIST_FILE = "Simple Specific Location Template/Simple Specific Location Template-Info.plist";
+				PRODUCT_NAME = MegaSelfie;
+				PROVISIONING_PROFILE = "96F0A14C-2FCB-49E6-859C-54F6FCD8F6EE";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BA29ECDE193A29E60034E4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2B56C9BFA424DCCBD83C338 /* Pods-Simple Specific Location Template.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Twipe Mobile Solutions SA";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simple Specific Location Template/Simple Specific Location Template-Prefix.pch";
+				INFOPLIST_FILE = "Simple Specific Location Template/Simple Specific Location Template-Info.plist";
+				PRODUCT_NAME = MegaSelfie;
+				PROVISIONING_PROFILE = "A1DEBC54-F816-4E77-8707-1F09867BF8B3";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BA29ECE0193A29E60034E4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Simple Specific Location Template.app/Simple Specific Location Template";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simple Specific Location Template/Simple Specific Location Template-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Simple Specific Location TemplateTests/Simple Specific Location TemplateTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BA29ECE1193A29E60034E4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Simple Specific Location Template.app/Simple Specific Location Template";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simple Specific Location Template/Simple Specific Location Template-Prefix.pch";
+				INFOPLIST_FILE = "Simple Specific Location TemplateTests/Simple Specific Location TemplateTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA29ECA2193A29E50034E4F8 /* Build configuration list for PBXProject "Simple Specific Location Template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA29ECDA193A29E60034E4F8 /* Debug */,
+				BA29ECDB193A29E60034E4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA29ECDC193A29E60034E4F8 /* Build configuration list for PBXNativeTarget "Simple Specific Location Template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA29ECDD193A29E60034E4F8 /* Debug */,
+				BA29ECDE193A29E60034E4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA29ECDF193A29E60034E4F8 /* Build configuration list for PBXNativeTarget "Simple Specific Location TemplateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA29ECE0193A29E60034E4F8 /* Debug */,
+				BA29ECE1193A29E60034E4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA29EC9F193A29E50034E4F8 /* Project object */;
+}
