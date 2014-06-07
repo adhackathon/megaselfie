@@ -7,13 +7,18 @@
 //
 
 #import "AppDelegate.h"
+#import "SpecificLocationViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    
+    SpecificLocationViewController *specLocVC = [[SpecificLocationViewController alloc] init];
+    [self.window setRootViewController:specLocVC];
     
     return YES;
 }
@@ -33,6 +38,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

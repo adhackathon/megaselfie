@@ -14,8 +14,6 @@
 		BA29ECB5193A29E50034E4F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA29ECB3193A29E50034E4F8 /* InfoPlist.strings */; };
 		BA29ECB7193A29E50034E4F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA29ECB6193A29E50034E4F8 /* main.m */; };
 		BA29ECBB193A29E50034E4F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA29ECBA193A29E50034E4F8 /* AppDelegate.m */; };
-		BA29ECBE193A29E50034E4F8 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA29ECBC193A29E50034E4F8 /* Main_iPhone.storyboard */; };
-		BA29ECC1193A29E50034E4F8 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA29ECBF193A29E50034E4F8 /* Main_iPad.storyboard */; };
 		BA29ECC4193A29E50034E4F8 /* SpecificLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA29ECC3193A29E50034E4F8 /* SpecificLocationViewController.m */; };
 		BA29ECC6193A29E60034E4F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA29ECC5193A29E60034E4F8 /* Images.xcassets */; };
 		BA29ECCD193A29E60034E4F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29ECCC193A29E60034E4F8 /* XCTest.framework */; };
@@ -45,8 +43,6 @@
 		BA29ECB8193A29E50034E4F8 /* Simple Specific Location Template-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Simple Specific Location Template-Prefix.pch"; sourceTree = "<group>"; };
 		BA29ECB9193A29E50034E4F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BA29ECBA193A29E50034E4F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BA29ECBD193A29E50034E4F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		BA29ECC0193A29E50034E4F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		BA29ECC2193A29E50034E4F8 /* SpecificLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecificLocationViewController.h; sourceTree = "<group>"; };
 		BA29ECC3193A29E50034E4F8 /* SpecificLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecificLocationViewController.m; sourceTree = "<group>"; };
 		BA29ECC5193A29E60034E4F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -116,8 +112,6 @@
 			children = (
 				BA29ECB9193A29E50034E4F8 /* AppDelegate.h */,
 				BA29ECBA193A29E50034E4F8 /* AppDelegate.m */,
-				BA29ECBC193A29E50034E4F8 /* Main_iPhone.storyboard */,
-				BA29ECBF193A29E50034E4F8 /* Main_iPad.storyboard */,
 				BA29ECC2193A29E50034E4F8 /* SpecificLocationViewController.h */,
 				BA29ECC3193A29E50034E4F8 /* SpecificLocationViewController.m */,
 				BA29ECC5193A29E60034E4F8 /* Images.xcassets */,
@@ -215,9 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA29ECC1193A29E50034E4F8 /* Main_iPad.storyboard in Resources */,
 				BA29ECC6193A29E60034E4F8 /* Images.xcassets in Resources */,
-				BA29ECBE193A29E50034E4F8 /* Main_iPhone.storyboard in Resources */,
 				BA29ECB5193A29E50034E4F8 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,22 +291,6 @@
 				BA29ECB4193A29E50034E4F8 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		BA29ECBC193A29E50034E4F8 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA29ECBD193A29E50034E4F8 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		BA29ECBF193A29E50034E4F8 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA29ECC0193A29E50034E4F8 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

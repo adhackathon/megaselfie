@@ -10,11 +10,17 @@
 
 @property (nonatomic, strong) ESTBeaconManager *beaconManager;
 @property (nonatomic, strong) ESTBeaconRegion *region;
-@property (weak, nonatomic) IBOutlet UILabel *regionLabel;
 
 @end
 
 @implementation SpecificLocationViewController
+
+- (void)loadView
+{
+    self.view = [[UIView alloc] init];
+    self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.view.backgroundColor = [UIColor whiteColor];
+}
 
 - (void)viewDidLoad
 {
@@ -40,7 +46,7 @@
     // Checks if there is any beacons available and find the closests one, then shows the proximity.
     if (beacons.count > 0)
     {
-        self.regionLabel.text = region.identifier;
+        
     }
 }
 
