@@ -148,7 +148,18 @@
 
 - (void)changeStatePictureTaken:(BOOL)pictureTaken
 {
-    
+    if (pictureTaken) {
+        _selfie.image = nil;
+        _selfie.hidden = YES;
+        _sendPicture.hidden = YES;
+        _takePicture.hidden = NO;
+        _pictureTaken = NO;
+    } else {
+        _selfie.hidden = NO;
+        _sendPicture.hidden = NO;
+        _takePicture.hidden = YES;
+        _pictureTaken = YES;
+    }
 }
 
 - (void)takeSelfie
@@ -169,18 +180,19 @@
 
 - (void)sendSelfie
 {
-//    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://server.url"]];
-//    NSData *imageData = UIImageJPEGRepresentation(_selfie.image, 0.5);
-//    NSDictionary *parameters = @{@"username": self.username, @"password" : self.password};
-//    AFHTTPRequestOperation *op = [manager POST:@"rest.of.url" parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-//        //do not put image inside parameters dictionary as I did, but append it!
-//        [formData appendPartWithFileData:imageData name:paramNameForImage fileName:@"photo.jpg" mimeType:@"image/jpeg"];
-//    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"Success: %@ ***** %@", operation.responseString, responseObject);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"Error: %@ ***** %@", operation.responseString, error);
-//    }];
-//    [op start];
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://78.47.196.110:3000"]];
+    NSData *imageData = UIImageJPEGRepresentation(_selfie.image, 0.5);
+    //NSDictionary *parameters = @{@"username": self.username, @"password" : self.password};
+    AFHTTPRequestOperation *op = [manager POST:@"/events/1/selfies" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        //do not put image inside parameters dictionary as I did, but append it!
+        [formData appendPartWithFileData:imageData name:@"selfie[image]" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self changeStatePictureTaken:YES];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@ ***** %@", operation.responseString, error);
+    }];
+    
+    [op start];
 }
 
 #pragma mark - Image picker controller

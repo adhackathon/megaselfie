@@ -384,8 +384,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Specific Location Template/Simple Specific Location Template-Prefix.pch";
 				INFOPLIST_FILE = "Simple Specific Location Template/Simple Specific Location Template-Info.plist";
-				PRODUCT_NAME = MegaSelfie;
+				PRODUCT_NAME = Crout;
 				PROVISIONING_PROFILE = "96F0A14C-2FCB-49E6-859C-54F6FCD8F6EE";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -400,8 +401,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Specific Location Template/Simple Specific Location Template-Prefix.pch";
 				INFOPLIST_FILE = "Simple Specific Location Template/Simple Specific Location Template-Info.plist";
-				PRODUCT_NAME = MegaSelfie;
+				PRODUCT_NAME = Crout;
 				PROVISIONING_PROFILE = "A1DEBC54-F816-4E77-8707-1F09867BF8B3";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
