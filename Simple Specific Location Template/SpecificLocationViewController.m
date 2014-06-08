@@ -15,6 +15,8 @@
 
 @interface SpecificLocationViewController () <ESTBeaconManagerDelegate>
 {
+    UIView *_approvalView;
+    
     UIButton *_takePicture;
     UIButton *_sendPicture;
     
@@ -57,37 +59,6 @@
                                                          multiplier:1.0
                                                            constant:0]];
     
-    _sendPicture = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [_sendPicture setTitleColor:[Colours blue] forState:UIControlStateNormal];
-    _sendPicture.titleLabel.font = [UIFont systemFontOfSize:22.0];
-    [_sendPicture setTitle:@"Send your selfie!" forState:UIControlStateNormal];
-    [_sendPicture addTarget:self action:@selector(sendSelfie) forControlEvents:UIControlEventTouchUpInside];
-    _sendPicture.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:_sendPicture];
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_sendPicture]-(50)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_sendPicture)]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view
-                                                          attribute:NSLayoutAttributeCenterX
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:_sendPicture
-                                                          attribute:NSLayoutAttributeCenterX
-                                                         multiplier:1.0
-                                                           constant:0]];
-    
-    _selfie = [[UIImageView alloc] init];
-    _selfie.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:_selfie];
-    
-    id topLayout = self.topLayoutGuide;
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[topLayout]-[_selfie(==210)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_selfie, topLayout)]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view
-                                                          attribute:NSLayoutAttributeCenterX
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:_selfie
-                                                          attribute:NSLayoutAttributeCenterX
-                                                         multiplier:1.0
-                                                           constant:0]];
-    
     _foundSeat = [[UIImageView alloc] init];
     _foundSeat.translatesAutoresizingMaskIntoConstraints = NO;
     _foundSeat.image = [UIImage imageNamed:@"foundSeat"];
@@ -108,7 +79,71 @@
 
 - (void)buildUpApprovalView
 {
+    _approvalView = [[UIView alloc] init];
+    _approvalView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    _approvalView.backgroundColor = [UIColor whiteColor];
+    _approvalView.hidden = YES;
+    [self.view addSubview:_approvalView];
     
+    _sendPicture = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_sendPicture setImage:[UIImage imageNamed:@"approval"] forState:UIControlStateNormal];
+    [_sendPicture addTarget:self action:@selector(sendSelfie) forControlEvents:UIControlEventTouchUpInside];
+    _sendPicture.translatesAutoresizingMaskIntoConstraints = NO;
+    [_approvalView addSubview:_sendPicture];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_sendPicture]-(50)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_sendPicture)]];
+
+    
+    UIButton *cancelSelfie = [UIButton buttonWithType:UIButtonTypeCustom];
+    [cancelSelfie setImage:[UIImage imageNamed:@"cancel"] forState:UIControlStateNormal];
+    [cancelSelfie addTarget:self action:@selector(cancelSelfie) forControlEvents:UIControlEventTouchUpInside];
+    cancelSelfie.translatesAutoresizingMaskIntoConstraints = NO;
+    [_approvalView addSubview:cancelSelfie];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[cancelSelfie]-(50)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(cancelSelfie)]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(50)-[_sendPicture]-(>=1)-[cancelSelfie]-(50)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(cancelSelfie, _sendPicture)]];
+    
+    _selfie = [[UIImageView alloc] init];
+    _selfie.translatesAutoresizingMaskIntoConstraints = NO;
+    [_approvalView addSubview:_selfie];
+    
+    UILabel *lblCancel = [[UILabel alloc] init];
+    lblCancel.text = @"AGAIN, PLEASE!";
+    lblCancel.translatesAutoresizingMaskIntoConstraints = NO;
+    [_approvalView addSubview:lblCancel];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lblCancel]-[cancelSelfie]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(lblCancel, cancelSelfie)]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lblCancel
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:cancelSelfie
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0]];
+    
+    UILabel *lblOk = [[UILabel alloc] init];
+    lblOk.text = @"LOOKS GOOD!";
+    lblOk.translatesAutoresizingMaskIntoConstraints = NO;
+    [_approvalView addSubview:lblOk];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lblOk]-[_sendPicture]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(lblOk, _sendPicture)]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lblOk
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_sendPicture
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0]];
+    
+    id topLayout = self.topLayoutGuide;
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[topLayout]-[_selfie(==210)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_selfie, topLayout)]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_approvalView
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_selfie
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0]];
 }
 
 - (void)viewDidLoad
@@ -121,7 +156,7 @@
     self.beaconManager.delegate = self;
     
     // create sample region object (you can additionaly pass major / minor values)
-    ESTBeaconRegion *region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID major:7285 minor:31172 identifier:@"region"];
+    ESTBeaconRegion *region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID major:38147 minor:45030 identifier:@"region"];
     region.notifyOnEntry = YES;
     region.notifyOnExit = YES;
     
@@ -162,19 +197,18 @@
 
 - (void)changeStateConnectedToBeacon:(BOOL)connected
 {
-    _selfie.hidden = !connected;
-    _sendPicture.hidden = !connected;
+    _approvalView.hidden = !connected;
     _takePicture.hidden = !connected;
     
     if (connected) {
         if (_pictureTaken) {
-            _sendPicture.hidden = NO;
-            _selfie.hidden = NO;
+            _approvalView.hidden = NO;
             _takePicture.hidden = YES;
+            _foundSeat.hidden = YES;
         } else {
-            _sendPicture.hidden = YES;
+            _approvalView.hidden = YES;
             _takePicture.hidden = NO;
-            _selfie.hidden = YES;
+            _foundSeat.hidden = NO;
         }
     }
     
@@ -185,15 +219,16 @@
 {
     if (pictureTaken) {
         _selfie.image = nil;
-        _selfie.hidden = YES;
-        _sendPicture.hidden = YES;
+        _approvalView.hidden = YES;
         _takePicture.hidden = NO;
         _pictureTaken = NO;
+        _foundSeat.hidden = NO;
     } else {
-        _selfie.hidden = NO;
-        _sendPicture.hidden = NO;
-        _takePicture.hidden = YES;
-        _pictureTaken = YES;
+        _selfie.hidden = YES;
+        _approvalView.hidden = YES;
+        _takePicture.hidden = NO;
+        _foundSeat.hidden = NO;
+        _pictureTaken = NO;
     }
 }
 
@@ -234,6 +269,11 @@
     [op start];
 }
 
+- (void)cancelSelfie
+{
+    [self changeStatePictureTaken:NO];
+}
+
 #pragma mark - Image picker controller
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -249,6 +289,7 @@
     _pictureTaken = YES;
     
     [self changeStateConnectedToBeacon:_viewStateBeaconNearby];
+    _selfie.hidden = NO;
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -272,7 +313,7 @@
     BOOL found = NO;
     if (beacons.count > 0) {
         for (ESTBeacon *beacon in beacons) {
-            if ([beacon.major intValue] == 7285 && [beacon.minor intValue] == 31172) {
+            if ([beacon.major intValue] == 38147 && [beacon.minor intValue] == 45030) {
                 found = YES;
                 _welcome.hidden = YES;
                 _foundSeat.hidden = NO;
