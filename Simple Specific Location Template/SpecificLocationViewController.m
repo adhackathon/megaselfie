@@ -19,6 +19,8 @@
     UIButton *_sendPicture;
     
     UIImageView *_selfie;
+    UIImageView *_welcome;
+    UIImageView *_foundSeat;
     
     MBProgressHUD *_hud;
     
@@ -39,15 +41,14 @@
     self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _takePicture = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [_takePicture setTitleColor:[Colours blue] forState:UIControlStateNormal];
-    _takePicture.titleLabel.font = [UIFont systemFontOfSize:22.0];
-    [_takePicture setTitle:@"Take a selfie!" forState:UIControlStateNormal];
+    _takePicture = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_takePicture setImage:[UIImage imageNamed:@"takePicture_nonActive"] forState:UIControlStateNormal];
+    [_takePicture setImage:[UIImage imageNamed:@"takePicture_active"] forState:UIControlStateHighlighted];
     [_takePicture addTarget:self action:@selector(takeSelfie) forControlEvents:UIControlEventTouchUpInside];
     _takePicture.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_takePicture];
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_takePicture]-(50)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_takePicture)]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_takePicture]-(105)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_takePicture)]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view
                                                           attribute:NSLayoutAttributeCenterX
                                                           relatedBy:NSLayoutRelationEqual
@@ -74,7 +75,6 @@
                                                            constant:0]];
     
     _selfie = [[UIImageView alloc] init];
-    _selfie.backgroundColor = [UIColor blueColor];
     _selfie.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_selfie];
     
@@ -87,6 +87,28 @@
                                                           attribute:NSLayoutAttributeCenterX
                                                          multiplier:1.0
                                                            constant:0]];
+    
+    _foundSeat = [[UIImageView alloc] init];
+    _foundSeat.translatesAutoresizingMaskIntoConstraints = NO;
+    _foundSeat.image = [UIImage imageNamed:@"foundSeat"];
+    _foundSeat.hidden = YES;
+    [self.view addSubview:_foundSeat];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_foundSeat]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_foundSeat)]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_foundSeat
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0]];
+    
+    [self buildUpApprovalView];
+}
+
+- (void)buildUpApprovalView
+{
+    
 }
 
 - (void)viewDidLoad
@@ -118,11 +140,24 @@
 
 - (void)setupHud
 {
-    if (!_hud) {
-        _hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        _hud.mode = MBProgressHUDModeIndeterminate;
-        _hud.labelText = @"Finding beacon...";
+    if (!_welcome) {
+        _welcome = [[UIImageView alloc] init];
+        _welcome.translatesAutoresizingMaskIntoConstraints = NO;
+        _welcome.image = [UIImage imageNamed:@"welcome"];
+        [self.view addSubview:_welcome];
+        
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_welcome]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_welcome)]];
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view
+                                                              attribute:NSLayoutAttributeCenterX
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:_welcome
+                                                              attribute:NSLayoutAttributeCenterX
+                                                             multiplier:1.0
+                                                               constant:0]];
     }
+    
+    _welcome.hidden = NO;
+    _foundSeat.hidden = YES;
 }
 
 - (void)changeStateConnectedToBeacon:(BOOL)connected
@@ -188,8 +223,12 @@
         [formData appendPartWithFileData:imageData name:@"selfie[image]" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self changeStatePictureTaken:YES];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You rock!" message:@"Woohoo, we got you!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@ ***** %@", operation.responseString, error);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Aw, snap!" message:@"Something went wrong, do it again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }];
     
     [op start];
@@ -235,8 +274,8 @@
         for (ESTBeacon *beacon in beacons) {
             if ([beacon.major intValue] == 7285 && [beacon.minor intValue] == 31172) {
                 found = YES;
-                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-                _hud = nil;
+                _welcome.hidden = YES;
+                _foundSeat.hidden = NO;
                 [self checkBeaconState:found];
             }
         }
