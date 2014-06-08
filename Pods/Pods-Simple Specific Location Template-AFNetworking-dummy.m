@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Simple_Specific_Location_Template_AFNetworking : NSObject
+@end
+@implementation PodsDummy_Pods_Simple_Specific_Location_Template_AFNetworking
+@end

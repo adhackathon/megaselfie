@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		437C073BEB9F4547B0920AC1 /* libPods-Simple Specific Location Template.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8750D965B582425699B587DB /* libPods-Simple Specific Location Template.a */; };
+		AC2CC3D9194362F300F60ECC /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2CC3D8194362F300F60ECC /* Colours.m */; };
 		BA29ECAB193A29E50034E4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29ECAA193A29E50034E4F8 /* Foundation.framework */; };
 		BA29ECAD193A29E50034E4F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29ECAC193A29E50034E4F8 /* CoreGraphics.framework */; };
 		BA29ECAF193A29E50034E4F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29ECAE193A29E50034E4F8 /* UIKit.framework */; };
@@ -33,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		8750D965B582425699B587DB /* libPods-Simple Specific Location Template.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Simple Specific Location Template.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2CC3D7194362F300F60ECC /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
+		AC2CC3D8194362F300F60ECC /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 		BA29ECA7193A29E50034E4F8 /* MegaSelfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegaSelfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA29ECAA193A29E50034E4F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BA29ECAC193A29E50034E4F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,6 +119,8 @@
 				BA29ECC3193A29E50034E4F8 /* SpecificLocationViewController.m */,
 				BA29ECC5193A29E60034E4F8 /* Images.xcassets */,
 				BA29ECB1193A29E50034E4F8 /* Supporting Files */,
+				AC2CC3D7194362F300F60ECC /* Colours.h */,
+				AC2CC3D8194362F300F60ECC /* Colours.m */,
 			);
 			path = "Simple Specific Location Template";
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				BA29ECC4193A29E50034E4F8 /* SpecificLocationViewController.m in Sources */,
 				BA29ECBB193A29E50034E4F8 /* AppDelegate.m in Sources */,
 				BA29ECB7193A29E50034E4F8 /* main.m in Sources */,
+				AC2CC3D9194362F300F60ECC /* Colours.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

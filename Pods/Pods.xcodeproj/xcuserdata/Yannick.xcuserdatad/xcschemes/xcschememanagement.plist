@@ -4,25 +4,55 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Simple Specific Location Template-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Simple Specific Location Template-EstimoteSDK.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Simple Specific Location Template-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Simple Specific Location Template-UIImage-ResizeMagick.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Simple Specific Location Template.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8F134B24DCBB4EC289D99084</key>
+		<key>16BFD08F8AF14781A8F9E527</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF364D81B20945A68185FAD1</key>
+		<key>1DB2C82883B94799B9778B98</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6EDA2B6D1A7341779C8F7C72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>73836587DAF4413E819750AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B967BCF977C7458EB39CC02A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

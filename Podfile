@@ -4,6 +4,9 @@
 target "Simple Specific Location Template" do
 
 pod 'EstimoteSDK'
+pod 'MBProgressHUD'
+pod "UIImage-ResizeMagick"
+pod "AFNetworking", "~> 2.0"
 
 end
 

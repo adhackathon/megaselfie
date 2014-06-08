@@ -7,6 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpecificLocationViewController : UIViewController
+@interface SpecificLocationViewController : UIViewController <UIImagePickerControllerDelegate>
 
 @end
